@@ -1,0 +1,115 @@
+.home {
+  .footer {
+    padding: 0;
+    user-select: none;
+    width: 90%;
+    position: fixed;
+    bottom: 0;
+    left: 5%;
+    padding: 8px 0;
+    a {
+      font-weight: 300;
+      padding: 0 8px;
+      color: #4e6e8e;
+      line-height: 28px;
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-block;
+      img {
+        position: relative;
+        top: 4px;
+        padding-right: 2px;
+        opacity: 0.8;
+      }
+    }
+  }
+  .hero {
+    .action-button {
+      &:not(:first-child) {
+        margin-left: 1rem;
+      }
+      margin: 0.5rem 1rem;
+      // display: block;
+      box-sizing: content-box;
+      width: 8rem;
+    }
+  }
+}
+
+@media (max-width: 719px) {
+  .navbar .logo {
+    min-width: 1.8rem;
+    width: 1.8rem;
+  }
+}
+
+.theme-default-content {
+  @media (max-width: 419px) {
+    div[class*="language-"] {
+      margin: 0.85rem 0;
+      border-radius: 6px;
+    }
+  }
+  s {
+    background-color: #282c34;
+    text-decoration-line: none;
+    color: #282c34;
+    padding: 0.1rem 0.5rem;
+    * {
+      color: inherit;
+    }
+    code {
+      padding: 0.1rem 0.5rem;
+    }
+    a {
+      text-decoration: underline dotted #3eaf7c;
+    }
+    svg.icon.outbound {
+      color: #282c34;
+    }
+    &:hover {
+      color: #fff;
+      transition: 0.13s linear;
+      a {
+        color: #3eaf7c;
+        background-color: #282c34;
+        text-decoration: underline #3eaf7c;
+        transition: 0.13s linear;
+      }
+      code {
+        color: #87a5c2;
+        background-color: #000;
+        transition: 0.13s linear;
+      }
+      svg.icon.outbound {
+        color: #aaa;
+        transition: 0.13s linear;
+      }
+    }
+  }
+}
+
+.sidebar-group {
+  margin: 0 1.5rem;
+  .sidebar-heading {
+    padding-left: 0;
+  }
+  .sidebar-link {
+    padding-left: 0.5rem;
+  }
+  &:not(:first-child) {
+    border-top: 1px solid #eaecef;
+  }
+}
+
+.dropdown-wrapper .mobile-dropdown-title {
+  font-size: 1.1rem;
+}
+
+.toggle-sidebar-button {
+  padding: 0.3rem;
+  .icon {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}

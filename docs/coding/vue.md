@@ -44,20 +44,19 @@ updated(registration) {
 },
 ```
 
-STEP 2：组件 `src/components/UpdateSW.vue`。我这里用了 `bootstrap.css` 。
+STEP 2：组件 `src/components/UpdateSW.vue`。
 
 ``` vue
 <template>
-  <div class="sw-update-popup shadow py-3 px-4 text-center bg-white rounded" v-if="updateExists">
-    <div class="mb-1">新内容可用</div>
-    <button class="btn btn-primary btn-sm px-3 text-white" @click="refreshApp">刷新</button>
+  <div class="sw-update-popup" v-if="updateExists">
+    <div>新内容可用</div>
+    <button @click="refreshApp">刷新</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'UpdateSW',
-  // copy https://dev.to/drbragg/handling-service-worker-updates-in-your-vue-pwa-1pip
   data() {
     return {
       refreshing: false,
@@ -90,9 +89,21 @@ export default {
 <style lang="scss" scoped>
 .sw-update-popup {
   position: fixed;
-  right: 2rem;
-  bottom: 7rem;
+  right: 1rem;
+  bottom: 4rem;
+  padding: 1rem;
+  border: 1px solid #3eaf7c;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 50%);
+  text-align: center;
   z-index: 4;
+  button {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    padding: 0.25rem 2rem;
+    border-width: 1px;
+  }
 }
 </style>
 ```

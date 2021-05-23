@@ -59,8 +59,8 @@
         <div>当前游戏内时间：{{ ingameTime.ingameTime }}</div>
         <div v-show="ingameTime.toDawn">距离天亮还有：{{ ingameTime.toDawn }} 分钟</div>
         <div v-show="ingameTime.toEvening">
-          离天黑还有：{{ ingameTime.toEvening > 60 ? parseInt(ingameTime.toEvening / 60) + ' 时 ' + (ingameTime.toEvening % 60) : ingameTime.toEvening }}
-          分
+          离天黑还有：{{ ingameTime.toEvening > 60 ? parseInt(ingameTime.toEvening / 60) + ' 小时 ' + (ingameTime.toEvening % 60) : ingameTime.toEvening }}
+          分钟
         </div>
       </div>
     </div>

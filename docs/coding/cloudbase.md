@@ -4,7 +4,31 @@
 
 ## 云数据库的使用
 
-- set 方法：有则更新，没有则插入
+`doc().set()`：有则更新，没有则插入，collection 没有 set 方法。
+
+当需要查询一个范围内的数据时，云开发的命令和 mongo 原生命令还是有点差别。
+
+<CodeGroup>
+  <CodeGroupItem title="cloudbase">
+
+``` js
+const _ = db.command
+db.collection('todos').where({
+  scores: _.gt(80).lt(100)
+}).get()
+```
+
+  </CodeGroupItem>
+  <CodeGroupItem title="mongo">
+
+``` js
+db.collection('todos').find({
+  scores: { $gt: 80, $lt: 100 }
+}).toArray()
+```
+
+  </CodeGroupItem>
+</CodeGroup>
 
 ## 静态网站托管开启防盗链设置后，导致网页无法访问
 

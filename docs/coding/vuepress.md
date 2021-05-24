@@ -10,7 +10,7 @@
 npm i @vuepress/plugin-search@next -D
 ```
 
-## vuepress@next dev 和 build 失败
+## esbuild 导致 vuepress@next dev 和 build 失败
 
 切换到 vuepress2 ，npm run dev 和 npm run build 都一直失败，提示 292 错误。
 ``` js
@@ -117,13 +117,29 @@ node ./node_modules/esbuild/install.js
 > 你可以通过 `[tagName, { attrName: attrValue }, innerHTML?]` 的格式来添加标签。
 [官方文档 - HeadConfig](https://vuepress2.netlify.app/zh/reference/config.html#head)
 
+<CodeGroup>
+  <CodeGroupItem title="config.js">
+
 ``` js
+// .vuepress/config.js
 module.exports = {
   head: [
     ['style', {}, '.toggle-sidebar-button .icon{max-width: 3rem;} .back-to-top{max-width: 3rem;}'],
   ],
 }
 ```
+
+  </CodeGroupItem>
+  <CodeGroupItem title="渲染结果">
+
+``` html
+<head>
+  <style>.toggle-sidebar-button .icon{max-width: 3rem;} .back-to-top{max-width: 3rem;}</style>
+</head>
+```
+
+  </CodeGroupItem>
+</CodeGroup>
 
 ::: details 修改主题的方法（比较麻烦）
 

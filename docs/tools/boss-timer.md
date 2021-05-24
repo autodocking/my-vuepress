@@ -4,7 +4,10 @@ sidebarDepth: 0
 
 # BOSS 计时器
 
-<Badge text="演示" />
+<Badge text="Chrome √" />
+<Badge text="Edge √" />
+<Badge type="danger" text="IE ×" />
+
 <ClientOnly>
   <BossTimer />
 </ClientOnly>

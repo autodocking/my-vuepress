@@ -71,8 +71,12 @@ module.exports = {
     lastUpdatedText: '最后更新',
     notFound: ['您访问的页面可能已删除、更名或暂时不可用。'],
     backToHome: '返回首页',
-    repo: 'autodocking/my-vuepress',
-    editLink: false,
+    repo:'autodocking/my-vuepress',
+    editLinkText: '本页源码',
+    docsRepo: 'https://github.com/autodocking/my-vuepress',
+    docsBranch: 'main',
+    docsDir: 'docs',
+    editLinkPattern: ':repo/raw/:branch/:path',
   },
   markdown: {
     code: {

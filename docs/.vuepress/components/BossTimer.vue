@@ -33,7 +33,12 @@
 
     <div class="spawn-list">
       <ul>
-        <li class="spawn-item" v-for="(itemOfSpawnList, index) in spawnList" :key="index" :class="index == nextSpawn ? 'next-spawn' : ''">
+        <li
+          class="spawn-item"
+          v-for="(itemOfSpawnList, index) in spawnList"
+          :key="index"
+          :class="index == nextSpawn ? 'next-spawn' : ''"
+        >
           <span>{{ itemOfSpawnList.spawnDate }}</span>
           <!-- <span>{{ itemOfSpawnList.spawnDay }}</span> -->
           <span>{{ itemOfSpawnList.spawnTime }}</span>
@@ -59,7 +64,11 @@
         <div>当前游戏内时间：{{ ingameTime.ingameTime }}</div>
         <div v-show="ingameTime.toDawn">距离天亮还有：{{ ingameTime.toDawn }} 分钟</div>
         <div v-show="ingameTime.toEvening">
-          离天黑还有：{{ ingameTime.toEvening > 60 ? parseInt(ingameTime.toEvening / 60) + ' 小时 ' + (ingameTime.toEvening % 60) : ingameTime.toEvening }}
+          离天黑还有：{{
+            ingameTime.toEvening > 60
+              ? parseInt(ingameTime.toEvening / 60) + ' 小时 ' + (ingameTime.toEvening % 60)
+              : ingameTime.toEvening
+          }}
           分钟
         </div>
       </div>
@@ -311,13 +320,16 @@ export default defineComponent({
       ingameTime.hours = parseInt((ingameTime.timestamp % (3600 * 24)) / 3600)
       ingameTime.minutes = parseInt(((ingameTime.timestamp % (3600 * 24)) % 3600) / 60)
       ingameTime.seconds = parseInt(((ingameTime.timestamp % (3600 * 24)) % 60) % 60)
-      ingameTime.ingameTime = double(ingameTime.hours) + ':' + double(ingameTime.minutes) + ':' + double(ingameTime.seconds)
+      ingameTime.ingameTime =
+        double(ingameTime.hours) + ':' + double(ingameTime.minutes) + ':' + double(ingameTime.seconds)
       ingameTime.isNight = (ingameTime.hours < 7) | (ingameTime.hours >= 22) ? true : false
-      ingameTime.toDawn = parseInt(currentTime / 60) < 20 ? 20 - parseInt(currentTime / 60) : 260 - parseInt(currentTime / 60)
+      ingameTime.toDawn =
+        parseInt(currentTime / 60) < 20 ? 20 - parseInt(currentTime / 60) : 260 - parseInt(currentTime / 60)
       if (ingameTime.toDawn > 40) {
         ingameTime.toDawn = 0
       }
-      ingameTime.toEvening = parseInt(currentTime / 60) < 220 ? 220 - parseInt(currentTime / 60) : 460 - parseInt(currentTime / 60)
+      ingameTime.toEvening =
+        parseInt(currentTime / 60) < 220 ? 220 - parseInt(currentTime / 60) : 460 - parseInt(currentTime / 60)
       if (ingameTime.toEvening > 200) {
         ingameTime.toEvening = 0
       }
@@ -449,7 +461,7 @@ export default defineComponent({
         background-color: #ffc300;
       }
       span {
-        padding: 0 .25rem;
+        padding: 0 0.25rem;
       }
       img {
         max-width: 1.2rem;

@@ -156,7 +156,7 @@ module.exports = {
 参考文章：
 - [How to configure importScript when using vue-cli-pwa plugin](https://stackoverflow.com/questions/64605755/how-to-configure-importscript-when-using-vue-cli-pwa-plugin)
 
-## vue 文件中 html 标签属性和 js 语句被过度折叠
+## 避免 vue 文件格式化时被过度折叠
 
 用的 Vetur 插件进行 vue 文件的格式化，本来屏幕很大的，但就是给你折成很多行，最终只显示在半个屏幕上，而且因为用了 bootstrap，每个 class 都很长，基本上是个标签都要给你折个行，内嵌 svg 之类的更严重，看着贼难受。
 
@@ -165,8 +165,17 @@ Vetur 用的是 Prettier，只需要修改一下 prettier.printWidth 参数即�
 // settings.json of vs-code
 "vetur.format.defaultFormatterOptions": {
     "prettier": {
-        "printWidth": 160
+        "printWidth": 120
     }
+}
+```
+也可以在项目根目录下创建一个 `.prettierrc` 文件，vuter 会加载这些设置，貌似会完全覆盖 setting.json 里的设置，所以要把所有用的上都写进去，好处就是可以被 git 同步，多端用起来方便些。
+
+``` js
+{
+  "singleQuote": true,
+  "semi": false,
+  "printWidth": 120
 }
 ```
 

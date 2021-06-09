@@ -1,4 +1,4 @@
-# VUE3
+# VUE
 
 ::: tip 这里是 vue 日志专区
 [官方文档在此](https://v3.cn.vuejs.org/)
@@ -65,6 +65,7 @@ export default {
     }
   },
   created() {
+    if (!navigator.serviceWorker) return
     document.addEventListener('swUpdated', this.updateAvailable, { once: true })
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       if (this.refreshing) return

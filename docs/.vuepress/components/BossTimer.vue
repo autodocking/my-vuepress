@@ -426,12 +426,12 @@ export default defineComponent({
     }
   }
   .boss-name {
-    text-align: center;
     font-size: 1.25rem;
+    text-align: center;
   }
 }
 .contdown-time-area {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   svg {
     vertical-align: -0.125em;
@@ -449,7 +449,7 @@ export default defineComponent({
   text-align: center;
   ul {
     margin: 1rem auto;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 2rem;
     list-style: none;
     padding: 0;
@@ -473,7 +473,7 @@ export default defineComponent({
 }
 
 .ingame-time {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   text-align: center;
   margin: 1rem 0;
   .ingame-time-bar {
@@ -510,7 +510,7 @@ export default defineComponent({
   white-space: nowrap;
   text-align: center;
   caption {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 0.5rem;
   }
   td {

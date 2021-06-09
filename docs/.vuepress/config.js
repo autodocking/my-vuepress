@@ -7,11 +7,12 @@ const codingRoutes = [
   '/coding/cloudbase.md',
   '/coding/markdown.md',
   '/coding/centos.md',
+  '/coding/bootstrap.md',
 ]
 
 const toolsRoutes = [
-  '/tools/boss-timer.md',
-  '/tools/excel-fix.md',
+  { link: 'https://sleepycat.xyz/tools#/excel-fix', text: '修复 EXCEL' },
+  { link: 'https://sleepycat.xyz/tools#/boss-timer', text: 'BOSS 计时器' },
 ]
 
 module.exports = {
@@ -71,7 +72,7 @@ module.exports = {
     lastUpdatedText: '最后更新',
     notFound: ['您访问的页面可能已删除、更名或暂时不可用。'],
     backToHome: '返回首页',
-    repo:'autodocking/my-vuepress',
+    repo: 'autodocking/my-vuepress',
     editLinkText: '本页源码',
     docsRepo: 'https://github.com/autodocking/my-vuepress',
     docsBranch: 'main',

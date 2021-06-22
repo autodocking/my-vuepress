@@ -1,15 +1,14 @@
 {
   "name": "my-vuepress-next",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "my notes",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "deploy.bat"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "autodocking",
+  "private": true,
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.2.0",
     "@vuepress/plugin-pwa": "^2.0.0-beta.14",

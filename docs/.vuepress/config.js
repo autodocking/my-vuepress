@@ -11,8 +11,8 @@ const codingRoutes = [
 ]
 
 const toolsRoutes = [
-  { link: 'https://sleepycat.xyz/tools#/excel-fix', text: '修复 EXCEL' },
-  { link: 'https://sleepycat.xyz/tools#/boss-timer', text: 'BOSS 计时器' },
+  { link: 'https://sleepycat.xyz/tools/#/excel-fix', text: '修复 EXCEL' },
+  { link: 'https://sleepycat.xyz/tools/#/boss-timer', text: 'BOSS 计时器' },
 ]
 
 module.exports = {
